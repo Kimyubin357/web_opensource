@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ToonCrafter 애니메이션 생성기</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>ToonCrafter 애니메이션 생성</h1>
+    <div class="title-input-container">
+        <p class="resolution-info">업로드 이미지는 최대 512x320 해상도를 생성할 수 있습니다.</p>
+    </div>
+    <div class="upload-container">
+       
+        <label for="image1" class="upload-box" ondragover="handleDragOver(event)" ondrop="handleDrop(event, 'image1')">
+            <img src="upload-icon.png" alt="Upload Icon" class="upload-icon"> <span>이미지를 끌어 놓으세요<br>또는<br>클릭해서 업로드하기</span>
+            <input type="file" id="image1" name="image1" accept="image/*">
+        </label>
+    
+        <label for="image2" class="upload-box" ondragover="handleDragOver(event)" ondrop="handleDrop(event, 'image2')">
+            <img src="upload-icon.png" alt="Upload Icon" class="upload-icon"> <span>이미지를 끌어 놓으세요<br>또는<br>클릭해서 업로드하기</span>
+            <input type="file" id="image2" name="image2" accept="image/*">
+        </label>
+        
+    </div>
+    <div class="title-input-container">
+        <label for="videoTitle">동영상 제목:</label>
+        <input type="text" id="videoTitle" name="videoTitle">
+        
+    </div>
+    <div>
+        <p class="title-input-info">확장자는 적지 않으셔도 됩니다.</p>
+    </div>
+
+    <button id="generateButton">애니메이션 생성</button>
+
+    <div id="animationContainer">
+        </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
